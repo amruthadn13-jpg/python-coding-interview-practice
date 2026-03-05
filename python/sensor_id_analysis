@@ -1,0 +1,13 @@
+registered_id=input("Enter the Registered ID's: \n")
+active_id=input("Enter the Active ID's: \n")
+
+registered_list=set(list(registered_id.split()))
+active_list=set(list(active_id.split()))
+
+working_id=registered_list.intersection(active_list)
+inactive_id=registered_list-active_list
+unknown_id=active_list-registered_list
+
+print("Working ID's are: \n",working_id)
+print("Inactive ID's are: \n",inactive_id)
+print("Unknown ID's are: \n",unknown_id)
